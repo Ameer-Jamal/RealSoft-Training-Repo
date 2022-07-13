@@ -21,9 +21,18 @@
         [disabled]="!allowNewServer"
         (click)="onCreateServer()">
         Press Here To Add the Server: {{serverName}}</button>
-        <br><br><br>
-        <p>{{serverCreationStatus}}</p>
         
+        <br><br><br>
+        
+        <p *ngIf="hasServerBeenCreated; else serverNotCreatedYet">
+            {{serverCreationStatus}}<br>
+            ------------------------------------------------------------------------------------
+        </p>
+        
+        <ng-template #serverNotCreatedYet>
+            ------------------------------------------------------------------------------------
+        </ng-template>
+
         <app-server></app-server>
         <app-server></app-server>
         <app-server></app-server>

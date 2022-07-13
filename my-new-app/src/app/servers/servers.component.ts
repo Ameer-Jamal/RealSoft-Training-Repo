@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus="No server has been created!";
   initialServerName='Server Name Here';
   serverName= this.initialServerName;
+  hasServerBeenCreated = false;
   constructor() { 
 
   }
@@ -20,10 +21,13 @@ export class ServersComponent implements OnInit {
 
   onCreateServer(){
     this.serverCreationStatus="The server by the name: \" "+this.serverName+" \" has been created";
+    this.hasServerBeenCreated=true;
   }
   onResetServerName(){
     this.serverName= '';
     this.allowNewServer=false;
+    this.hasServerBeenCreated=false;
+
   }
 
   onUpdateServerName(e: any ){

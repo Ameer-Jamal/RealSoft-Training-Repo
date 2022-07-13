@@ -4,6 +4,9 @@ import { Component } from '@angular/core'
     templateUrl:"./server.component.html",
     styleUrls: ['./server.component.css']
 })
-export class serverComponent{
 
+
+export class serverComponent{
+    serverId: number=10;
+    serverStatus="Offline"
 }

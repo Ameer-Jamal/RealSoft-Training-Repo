@@ -8,18 +8,29 @@ import { Component, OnInit } from '@angular/core';
 export class ServersComponent implements OnInit {
   allowNewServer = false;
   serverCreationStatus="No server has been created!";
-  initialServerName='Server Name Here';
+  initialServerName='';
+  placeHolder="Please enter a server name"
   serverName= this.initialServerName;
   hasServerBeenCreated = false;
+  arrOfServers = ['server1'];
+  hideToggle=false;
+
+
   constructor() { 
 
   }
 
   ngOnInit(): void {
+
   }
 
-
+  onHideServers(){
+    if(this.hideToggle == false)
+    this.hideToggle=true;
+    else this.hideToggle=false;
+}
   onCreateServer(){
+    this.arrOfServers.push(this.serverName)
     this.serverCreationStatus="The server by the name: \" "+this.serverName+" \" has been created";
     this.hasServerBeenCreated=true;
   }
@@ -30,7 +41,7 @@ export class ServersComponent implements OnInit {
 
   }
 
-  onUpdateServerName(e: any ){
+  onUpdateServerName(e: any ){                        // or is empty
     if(this.serverName ==  this.initialServerName || !this.serverName){
       this.allowNewServer=false;
      }
@@ -39,4 +50,6 @@ export class ServersComponent implements OnInit {
       this.serverName = (<HTMLInputElement>e.target).value
     }
   }
+
+
 }

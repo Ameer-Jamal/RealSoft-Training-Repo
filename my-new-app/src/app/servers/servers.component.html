@@ -13,10 +13,16 @@
             <input type="text" 
             class="form-control"
             [(ngModel)]="serverName"
-            (input)="onUpdateServerName($event)">
+            (input)="onUpdateServerName($event)"
+           [placeholder]="placeHolder">
         </div>
+
+
+
         <br><br> 
         <br><br>
+
+
         <button class="btn btn-primary"
         [disabled]="!allowNewServer"
         (click)="onCreateServer()">
@@ -24,25 +30,34 @@
         
         <br><br><br>
         
-        <p *ngIf="hasServerBeenCreated; else serverNotCreatedYet">
+        <p
+         style="color:rgba(0, 247, 255, 0.811)"
+         *ngIf="hasServerBeenCreated;
+          else serverNotCreatedYet">
             {{serverCreationStatus}}<br>
             ------------------------------------------------------------------------------------
         </p>
         
+
         <ng-template #serverNotCreatedYet>
+            <p style="color:rgba(0, 247, 255, 0.174)" >
             ------------------------------------------------------------------------------------
+            </p>
         </ng-template>
 
-        <app-server></app-server>
-        <app-server></app-server>
-        <app-server></app-server>
-        <app-server></app-server>
+        <app-server [ngStyle]="{'display': hideToggle ? 'none' : 'block' }" *ngFor="let server of arrOfServers"></app-server>
+
 
         <br><br> 
 
-        <button class="btn btn-Danger"
+        <button class="btn btn-warning"
         [disabled]="!allowNewServer"
         (click)="onResetServerName()">
         Press Here To reset the Server Name</button>
+<br><br>
+        <button class="btn btn-Danger"
+        [disabled]="!allowNewServer"
+        (click)="onHideServers()">
+        Press Here To Hide or unhide servers </button>
     </div>
 </div>

@@ -25,9 +25,7 @@ export class ServersComponent implements OnInit {
   }
 
   onHideServers(){
-    if(this.hideToggle == false)
-    this.hideToggle=true;
-    else this.hideToggle=false;
+    this.hideToggle=!this.hideToggle
 }
   onCreateServer(){
     this.arrOfServers.push(this.serverName)

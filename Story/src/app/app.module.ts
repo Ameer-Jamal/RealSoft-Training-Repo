@@ -7,9 +7,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatCardModule} from '@angular/material/card';
+import { HeaderComponent } from './header/header.component';
+import {MatCommonModule} from '@angular/material/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatBadgeModule} from '@angular/material/badge';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { ContentComponent } from './content/content.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    ContentComponent
   ],
   imports: [
     BrowserModule,
@@ -17,7 +26,12 @@ import {MatCardModule} from '@angular/material/card';
     BrowserAnimationsModule,
     MatSliderModule,
     MatAutocompleteModule,
-    MatCardModule
+    MatCardModule,
+    MatCommonModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatBadgeModule,
+    DropDownListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,152 @@
+@import '../../../node_modules/@syncfusion/ej2-base/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-lists/styles/material.css';
+@import '../../../node_modules/@syncfusion/ej2-angular-dropdowns/styles/material.css';
+@import url(//db.onlinewebfonts.com/c/7d89fd5a3b1077fea23b1658f1f8d320?family=Fidel);
+
+*{
+    background: rgb(255, 255, 255);
+    
+}
+  img{
+    margin-top:2.6vw;
+
+  }
+  .arabicBtn{
+    margin-top:2.5vw;
+  }
+.right{
+
+    margin-left: 35rem; 
+    margin-right: 0;
+}
+.dropDown{        margin-top:2.5vw; margin-left: auto; 
+    margin-right: 0;
+
+}
+.badge{ 
+    margin-top:1.3vw;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background: #99dae0; 
+    padding: 0px;
+    text-align:center;
+    float: right;
+    margin-left: 20vw;
+}
+
+.deconstructed {
+    text-transform: uppercase;
+    position: relative;
+
+    margin-top:3.1vw;
+
+    color: transparent;
+    font-family:Fidel;
+    font-size: 2.7vw;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.00em;
+  }
+  
+  .deconstructed > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: rgb(52,49,76);
+
+    pointer-events: none;
+  }
+  
+  .deconstructed:hover > div:nth-child(1) {
+    -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+    mask-image: linear-gradient(black 25%, transparent 25%);
+    animation: deconstructed1 2s infinite;
+  }
+  
+  .deconstructed:hover > div:nth-child(2) {
+    -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    animation: deconstructed2 2s infinite;
+  }
+  
+  .deconstructed:hover > div:nth-child(3) {
+     -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    animation: deconstructed3 2s infinite;
+  }
+  
+  .deconstructed:hover > div:nth-child(4) {
+     -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+    mask-image: linear-gradient(transparent 75%, black 75%);
+    animation: deconstructed4 2s infinite;
+  }
+  
+  @keyframes deconstructed1 {
+    0% {
+      transform: translateX(100%);
+    }
+    26% {
+      transform: translateX(0%);
+    }
+    83% {
+      transform: translateX(-0.1%);
+    }
+    100% {
+      transform: translateX(-280%);
+    
+    }
+  }
+  
+  @keyframes deconstructed2 {
+    0% {
+      transform: translateX(100%);
+    }
+    24% {
+      transform: translateX(0.5%);
+    }
+    82% {
+      transform: translateX(-0.2%);
+    }
+    100% {
+      transform: translateX(-285%);
+    }
+  }
+  
+  @keyframes deconstructed3 {
+    0% {
+      transform: translateX(200%);
+    }
+    22% {
+      transform: translateX(0%);
+    }
+    81% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-290%);
+    }
+  }
+  
+  @keyframes deconstructed4 {
+    0% {
+      transform: translateX(100%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-295%);
+    }
+  }

@@ -1,5 +1,29 @@
 
+*{
+  text-align: center;
+}
 .example-card {
     max-width: 400px;
   }
-  
+  mat-card{
+    margin: 20px;
+  }
+
+
+  mat-card-title{
+    text-align: center;
+    font-size: 55px;
+  }
+
+
+  *.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+ }

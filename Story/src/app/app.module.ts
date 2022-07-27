@@ -24,6 +24,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatDividerModule} from '@angular/material/divider';
 import { CardComponent } from './content/card-container/card/card.component';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,8 +56,9 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     FormsModule,
     ReactiveFormsModule,
     MatDividerModule,
-    MatProgressBarModule
-    
+    MatProgressBarModule,
+    FontAwesomeModule,
+    MatSelectModule
 
   ],
   providers: [],
